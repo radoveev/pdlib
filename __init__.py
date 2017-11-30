@@ -49,14 +49,9 @@ log = logging.getLogger(__name__)
 # --------------------------------------------------------------------------- #
 # Define functions
 # --------------------------------------------------------------------------- #
-def main():
+def initialize():
     # set up logging
     logging.basicConfig(level=logging.WARNING)
-    log.info("")
-    log.info("")
-    log.info("Paperdoll editor")
-    log.info("")
-    log.info("cwd %s", os.getcwd())
     # initialize signalling
     sisi.add_signals("add item",
                      "change character",
@@ -68,9 +63,20 @@ def main():
     # create editor model
     model.editor = model.MPaperdollEditor()
     # parse paperdoll ressource files
-    dolldir = Path("../paperdoll/dollfiles").resolve()
-    assert dolldir.exists()
+    dolldir = (Path(__file__).parent / "dollfiles").resolve()
+    if not dolldir.exists():
+        raise FileNotFoundError("Could not find doll files: '%s'" %
+                                str(dolldir))
     model.editor.parse_ressources(dolldir)
+
+
+def main():
+    initialize()
+    log.info("")
+    log.info("")
+    log.info("Paperdoll editor")
+    log.info("")
+    log.info("cwd %s", os.getcwd())
     # create Qt GUI
     view.version = __version__
     view.app = view.Application(sys.argv)
