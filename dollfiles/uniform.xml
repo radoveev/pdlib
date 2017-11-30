@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xml>
+<geometry>
+    <g id="uniform_bowtie" bone="pelvis">
+        <import id="uni_bowtie_strap_l" connectivity="uni_bowtie_strap_l"/>
+        <mirror axis="y" template="uni_bowtie_strap_l"/>
+        <import id="uni_bowtie_soft_l" connectivity="uni_bowtie_l"/>
+        <mirror axis="y" template="uni_bowtie_soft_l"/>
+    </g>
+    <!-- uniform shirt -->
+    <g id="uniform_shirt_l">
+        <import id="uni_shirt_arm_l" bone="upper_arm_bone_l"/>
+        <import id="uni_shirt_body_l" bone="pelvis"/>
+    </g>
+    <import id="uni_shirt_upper_body_l"/>
+    <mirror axis="y" template="uni_shirt_upper_body_l"/>
+    <import id="uni_shirt_lower_body_l"/>
+    <mirror axis="y" template="uni_shirt_lower_body_l"/>
+    <mirror axis="y" template="uni_shirt_arm_l"/>
+    <mirror axis="y" template="uni_shirt_body_l"/>
+    <import id="uni_shirt_upper_arm_l" bone="upper_arm_bone_l"/>
+    <mirror axis="y" template="uni_shirt_upper_arm_l"/>
+    <import id="uni_shirt_lower_arm_l" bone="lower_arm_bone_l"/>
+    <mirror axis="y" template="uni_shirt_lower_arm_l"/>
+    <import id="uni_shirt_upper_decorations"/>
+    <import id="uni_shirt_lower_decorations"/>
+    <g id="uniform_shirt">
+        <use id="uniform_shirt_l"/>
+        <mirror axis="y" template="uniform_shirt_l"/>
+        <import id="uni_shirt_decorations" bone="pelvis"/>
+        <import id="uni_shirt_collar"/>
+        <use id="uniform_bowtie"/>
+        <import id="uni_shirt_collar_flaps_small"/>
+    </g>
+    <g id="uniform_bowtie_loose">
+        <import id="uni_bowtie_strap_loose_l"
+             connectivity="uni_bowtie_strap_l"/>
+        <mirror axis="y" template="uni_bowtie_strap_loose_l"/>
+        <import id="uni_bowtie_loose_l" connectivity="uni_bowtie_l"/>
+        <mirror axis="y" template="uni_bowtie_loose_l"/>
+    </g>
+    <g id="uniform_shirt_unbuttoned_l">
+        <use id="uni_shirt_arm_l"/>
+        <import id="uni_shirt_unbuttoned_body_l"/>
+    </g>
+    <g id="uniform_shirt_unbuttoned">
+        <use id="uniform_shirt_unbuttoned_l"/>
+        <mirror axis="y" template="uniform_shirt_unbuttoned_l"/>
+        <import id="uni_shirt_unbuttoned_decorations"/>
+        <import id="uni_shirt_unbuttoned_collar"/>
+        <use id="uniform_bowtie_loose"/>
+        <import id="uni_shirt_unbuttoned_collar_flaps_small"/>
+    </g>
+    <g id="uniform_shirt_1button_l">
+        <use id="uni_shirt_arm_l"/>
+        <import id="uni_shirt_1button_body_l"/>
+    </g>
+    <g id="uniform_shirt_1button">
+        <use id="uniform_shirt_1button_l"/>
+        <mirror axis="y" template="uniform_shirt_1button_l"/>
+        <import id="uni_shirt_1button_decorations"/>
+        <import id="uni_shirt_1button_collar"/>
+        <import id="uni_shirt_1button_collar_flaps_small"/>
+    </g>
+    <!-- uniform jacket -->
+    <g id="uniform_jacket_l">
+        <import id="uni_jacket_arm_l" bone="upper_arm_bone_l"/>
+        <import id="uni_jacket_body_l" bone="pelvis"/>
+    </g>
+    <import id="uni_jacket_upper_body_l"/>
+    <mirror axis="y" template="uni_jacket_upper_body_l"/>
+    <import id="uni_jacket_lower_body_l"/>
+    <mirror axis="y" template="uni_jacket_lower_body_l"/>
+    <import id="uni_jacket_decoration" bone="pelvis"/>
+    <mirror axis="y" template="uni_jacket_arm_l"/>
+    <import id="uni_jacket_upper_arm_l" bone="upper_arm_bone_l"/>
+    <import id="uni_jacket_lower_arm_l" bone="lower_arm_bone_l"/>
+    <mirror axis="y" template="uni_jacket_upper_arm_l"/>
+    <mirror axis="y" template="uni_jacket_lower_arm_l"/>
+    <mirror axis="y" template="uni_jacket_body_l"/>
+    <g id="uniform_jacket_loose_l">
+        <use id="uni_jacket_arm_l"/>
+        <import id="uni_jacket_loose_body_l" bone="pelvis"/>
+    </g>
+    <g id="uniform_jacket_loose">
+        <use id="uniform_jacket_loose_l"/>
+        <mirror axis="y" template="uniform_jacket_loose_l"/>
+        <import id="uni_jacket_loose_decoration" bone="pelvis"/>
+    </g>
+    <g id="uniform_jacket_open_l">
+        <use id="uni_jacket_arm_l"/>
+        <import id="uni_jacket_open_body_l" bone="pelvis"/>
+    </g>
+    <g id="uniform_jacket_open">
+        <use id="uniform_jacket_open_l"/>
+        <mirror axis="y" template="uniform_jacket_open_l"/>
+        <import id="uni_jacket_open_decoration" bone="pelvis"/>
+    </g>
+    <import id="uni_jacket_chest0_l" connectivity="uni_chest_l"/>
+    <mirror axis="y" template="uni_jacket_chest0_l"/>
+    <import id="uni_jacket_chest20_l" connectivity="uni_chest_l"/>
+    <mirror axis="y" template="uni_jacket_chest20_l"/>
+    <import id="uni_jacket_chest100_l" connectivity="uni_chest_l"/>
+    <mirror axis="y" template="uni_jacket_chest100_l"/>
+    <g id="uniform_boobs_0" bone="pelvis">
+        <import id="uni_jacket_boob0_l" connectivity="uni_boob_l"/>
+        <mirror axis="y" template="uni_jacket_boob0_l"/>
+    </g>
+    <g id="uniform_boobs_20" bone="pelvis">
+        <import id="uni_jacket_boob20_l" connectivity="uni_boob_l"/>
+        <mirror axis="y" template="uni_jacket_boob20_l"/>
+    </g>
+    <g id="uniform_boobs_100" bone="pelvis">
+        <import id="uni_jacket_boob100_l" connectivity="uni_boob_l"/>
+        <mirror axis="y" template="uni_jacket_boob100_l"/>
+    </g>
+    <g id="shirt_boobs_0" bone="pelvis">
+        <import id="uni_shirt_boob0_l" connectivity="uni_boob_l"/>
+        <mirror axis="y" template="uni_shirt_boob0_l"/>
+    </g>
+    <g id="shirt_boobs_20" bone="pelvis">
+        <import id="uni_shirt_boob20_l" connectivity="uni_boob_l"/>
+        <mirror axis="y" template="uni_shirt_boob20_l"/>
+    </g>
+    <g id="shirt_boobs_100" bone="pelvis">
+        <import id="uni_shirt_boob100_l" connectivity="uni_boob_l"/>
+        <mirror axis="y" template="uni_shirt_boob100_l"/>
+    </g>
+    <import id="uni_shirt_chest0_l" connectivity="uni_chest_l"/>
+    <mirror axis="y" template="uni_shirt_chest0_l"/>
+    <import id="uni_shirt_chest20_l" connectivity="uni_chest_l"/>
+    <mirror axis="y" template="uni_shirt_chest20_l"/>
+    <import id="uni_shirt_chest100_l" connectivity="uni_chest_l"/>
+    <mirror axis="y" template="uni_shirt_chest100_l"/>
+    <g id="uniform_skirt_XS_0" bone="pelvis">
+        <import id="uni_skirt_XS_micro" connectivity="uni_skirt"/>
+    </g>
+    <g id="uniform_skirt_XS_100" bone="pelvis">
+        <import id="uni_skirt_XS_long" connectivity="uni_skirt"/>
+    </g>
+    <g id="uniform_skirt_M_0" bone="pelvis">
+        <import id="uni_skirt_M_micro" connectivity="uni_skirt"/>
+    </g>
+    <g id="uniform_skirt_M_100" bone="pelvis">
+        <import id="uni_skirt_M_long" connectivity="uni_skirt"/>
+    </g>
+    <g id="uniform_skirt_XL_0" bone="pelvis">
+        <import id="uni_skirt_XL_micro" connectivity="uni_skirt"/>
+    </g>
+    <g id="uniform_skirt_XL_100" bone="pelvis">
+        <import id="uni_skirt_XL_long" connectivity="uni_skirt"/>
+    </g>
+</geometry>
+<connectivity>
+    <mirror template_suffix="_l" mirror_suffix="_r"/>
+</connectivity>
+<!--
+<layers>
+    <layer name="uniform">
+        <animation name="uniform_skirt_hips"/>
+        <geometry id="uniform_shirt_1button"/>
+        <animation name="shirt_boobs"/>
+        <geometry id="uniform_jacket_open"/>
+    </layer>
+    <layer name="uniform_boobs">
+        <animation name="uniform_boobs"/>
+    </layer>
+</layers>
+-->
+<!--
+<drawingorder>
+    <bone name="pelvis">
+        <tier name="clothes">
+            <animation name="uniform_skirt_hips"/>
+            <geometry id="uniform_shirt_1button"/>
+        </tier>
+        <tier name="overclothes">
+            <geometry id="uniform_jacket_open"/>
+        </tier>
+    </bone>
+    <bone name="boob_bone_l">
+        <tier name="clothes">
+            <animation name="shirt_boobs"/>
+        </tier>
+        <tier name="overclothes">
+            <animation name="uniform_boobs"/>
+        </tier>
+    </bone>
+</drawingorder>
+-->
+<!-- item definitions
+    The slot defines the item slot this item will occupy in the character
+    inventory.
+    The zlevel should specify a slot name and an optional modifier and
+    therefore determines the zlevel base of this item.
+    The ztier modifies the zlevel base to determine the final zlevel of the
+    geometry element or animation. If no ztier is specified, no modifier is
+    assumed.
+-->
+<item id="uniform_jacket" slot="jacket" zlevel="jacket">
+    <geometry id="uni_jacket_upper_arm_l" bone="upper_arm_bone_l"/>
+    <geometry id="uni_jacket_upper_arm_r" bone="upper_arm_bone_r"/>
+    <geometry id="uni_jacket_lower_arm_l" bone="lower_arm_bone_l"/>
+    <geometry id="uni_jacket_lower_arm_r" bone="lower_arm_bone_r"/>
+    <geometry id="uni_jacket_upper_body_l" bone="nipple_bone_l"/>
+    <geometry id="uni_jacket_upper_body_r" bone="nipple_bone_l"/>
+    <geometry id="uni_jacket_lower_body_l" bone="pelvis"/>
+    <geometry id="uni_jacket_lower_body_r" bone="pelvis"/>
+    <!--
+    <animation name="uniform_chest_l" bone="nipple_bone_l"/>
+    <animation name="uniform_chest_r" bone="nipple_bone_l"/>
+    -->
+    <geometry id="uni_jacket_decoration" bone="nipple_bone_l"/>
+    <animation name="uniform_boobs" bone="nipple_bone_l"/>
+</item>
+<item id="uniform_jacket_loose" slot="jacket" zlevel="jacket">
+    <geometry id="uniform_jacket_loose" bone="pelvis"/>
+    <animation name="uniform_boobs" bone="boob_bone_l"/>
+</item>
+<item id="uniform_jacket_open" slot="jacket" zlevel="jacket">
+    <geometry id="uniform_jacket_open" ztier="base" bone="pelvis"/>
+    <animation name="uniform_boobs" bone="boob_bone_l"/>
+</item>
+<item id="uniform_shirt" slot="shirt" zlevel="shirt">
+    <geometry id="uni_shirt_upper_arm_l" bone="upper_arm_bone_l"/>
+    <geometry id="uni_shirt_upper_arm_r" bone="upper_arm_bone_r"/>
+    <geometry id="uni_shirt_lower_arm_l" bone="lower_arm_bone_l"/>
+    <geometry id="uni_shirt_lower_arm_r" bone="lower_arm_bone_r"/>
+    <geometry id="uni_shirt_lower_body_l" bone="pelvis"/>
+    <geometry id="uni_shirt_lower_body_r" bone="pelvis"/>
+    <geometry id="uni_shirt_upper_body_l" bone="nipple_bone_l"/>
+    <geometry id="uni_shirt_upper_body_r" bone="nipple_bone_l"/>
+    <!--
+    <animation name="shirt_chest_l" bone="nipple_bone_l"/>
+    <animation name="shirt_chest_r" bone="nipple_bone_l"/>
+    -->
+    <geometry id="uni_shirt_lower_decorations" bone="pelvis" ztier="detail"/>
+    <geometry id="uni_shirt_upper_decorations" bone="nipple_bone_l"
+            ztier="detail"/>
+    <geometry id="uni_shirt_collar" bone="nipple_bone_l" ztier="detail"/>
+    <geometry id="uniform_bowtie" bone="nipple_bone_l"
+            zlevel="jacket" ztier="detail"/>
+    <geometry id="uni_shirt_collar_flaps_small"
+            bone="nipple_bone_l"  zlevel="jacket+1" ztier="detail"/>
+    <animation name="shirt_boobs" ztier="base" bone="nipple_bone_l"/>
+</item>
+<item id="uniform_shirt_1button" slot="shirt" zlevel="shirt">
+    <geometry id="uniform_shirt_1button" ztier="base" bone="pelvis"/>
+    <animation name="shirt_boobs" ztier="base" bone="boob_bone_l"/>
+</item>
+<item id="uniform_skirt" slot="pants" zlevel="pants">
+    <animation name="uniform_skirt_hips" ztier="base" bone="pelvis"/>
+</item>
+<animations>
+   <animation name="uniform_chest_l" default="30">
+		<keyframe number="0" geometry="uni_jacket_chest0_l"/>
+		<keyframe number="30" geometry="uni_jacket_chest20_l"/>
+		<keyframe number="100" geometry="uni_jacket_chest100_l"/>
+	</animation>
+   <animation name="uniform_chest_r" default="30">
+		<keyframe number="0" geometry="uni_jacket_chest0_r"/>
+		<keyframe number="30" geometry="uni_jacket_chest20_r"/>
+		<keyframe number="100" geometry="uni_jacket_chest100_r"/>
+	</animation>
+   <animation name="uniform_boobs" default="30">
+		<keyframe number="0" geometry="uniform_boobs_0"/>
+		<keyframe number="30" geometry="uniform_boobs_20"/>
+		<keyframe number="100" geometry="uniform_boobs_100"/>
+	</animation>
+    <!--
+   <animation name="uniform_jacket_open" default="0">
+		<keyframe number="0" geometry="uniform_jacket"/>
+		<keyframe number="100" geometry="uniform_jacket_loose"/>
+	</animation>
+    -->
+   <animation name="shirt_boobs" default="30">
+		<keyframe number="0" geometry="shirt_boobs_0"/>
+		<keyframe number="40" geometry="shirt_boobs_20"/>
+		<keyframe number="100" geometry="shirt_boobs_100"/>
+	</animation>
+   <animation name="shirt_chest_l" default="30">
+		<keyframe number="0" geometry="uni_shirt_chest0_l"/>
+		<keyframe number="40" geometry="uni_shirt_chest20_l"/>
+		<keyframe number="100" geometry="uni_shirt_chest100_l"/>
+	</animation>
+   <animation name="shirt_chest_r" default="30">
+		<keyframe number="0" geometry="uni_shirt_chest0_r"/>
+		<keyframe number="40" geometry="uni_shirt_chest20_r"/>
+		<keyframe number="100" geometry="uni_shirt_chest100_r"/>
+	</animation>
+   <animation name="uniform_skirt_XS_length" default="70">
+		<keyframe number="0" geometry="uniform_skirt_XS_0"/>
+		<keyframe number="101" geometry="uniform_skirt_XS_100"/>
+	</animation>
+   <animation name="uniform_skirt_M_length" default="70">
+		<keyframe number="0" geometry="uniform_skirt_M_0"/>
+		<keyframe number="101" geometry="uniform_skirt_M_100"/>
+	</animation>
+   <animation name="uniform_skirt_XL_length" default="70">
+		<keyframe number="0" geometry="uniform_skirt_XL_0"/>
+		<keyframe number="101" geometry="uniform_skirt_XL_100"/>
+	</animation>
+    <combined name="uniform_skirt_hips" default="70"
+         geoid="('uni_skirt',)">>
+         <animation name="uniform_skirt_XS_length">
+    	       <keyframe number="0" weight="100"/>
+    	       <keyframe number="50" weight="0"/>
+    	       <keyframe number="100" weight="0"/>
+        </animation>
+         <animation name="uniform_skirt_M_length">
+    	       <keyframe number="0" weight="0"/>
+    	       <keyframe number="50" weight="100"/>
+    	       <keyframe number="100" weight="0"/>
+        </animation>
+         <animation name="uniform_skirt_XL_length">
+    	       <keyframe number="0" weight="0"/>
+    	       <keyframe number="50" weight="0"/>
+    	       <keyframe number="100" weight="100"/>
+        </animation>
+    </combined>
+</animations>
+<dials>
+    <dial name="boobs_size">
+        <animation name="uniform_chest_l" min="0" init="30" max="100"/>
+        <animation name="uniform_chest_r" min="0" init="30" max="100"/>
+        <animation name="uniform_boobs" min="0" init="30" max="100"/>
+        <animation name="shirt_boobs" min="0" init="30" max="100"/>
+        <animation name="shirt_chest_l" min="0" init="30" max="100"/>
+        <animation name="shirt_chest_r" min="0" init="30" max="100"/>
+    </dial>
+    <!--
+    <dial name="uniform_jacket_open" min="1" max="100">
+        <animation name="uniform_jacket_open" min="0" init="0" max="100"/>
+    </dial>
+    -->
+    <dial name="skirt_length" min="1" max="100">
+        <animation name="uniform_skirt_XS_length"
+             min="0" init="70" max="100"/>
+        <animation name="uniform_skirt_M_length"
+             min="0" init="70" max="100"/>
+        <animation name="uniform_skirt_XL_length"
+             min="0" init="70" max="100"/>
+    </dial>
+</dials>
+</xml>

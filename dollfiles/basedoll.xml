@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xml>
+<geometry>
+    <g id="face" bone="skull">
+        <import id="face_normal_l" geometry="face_l" connectivity="face_l"/>
+        <mirror axis="y" template="face_normal_l"/>
+    </g>
+    <g id="face_mouth_open" bone="skull">
+        <import id="face_mouth_open_l" connectivity="face_l"/>
+        <mirror axis="y" template="face_mouth_open_l"/>
+    </g>
+    <g id="mouth_normal" bone="skull">
+        <import id="throat_normal_l" connectivity="throat_l"/>
+        <mirror axis="y" template="throat_normal_l"/>
+        <import id="tongue_normal" connectivity="tongue"/>
+        <import id="mouth_normal_shadow_l" connectivity="mouth_shadow_l"/>
+        <mirror axis="y" template="mouth_normal_shadow_l"/>
+    </g>
+    <g id="mouth_open" bone="skull">
+        <import id="throat_mouth_open_l" connectivity="throat_l"/>
+        <mirror axis="y" template="throat_mouth_open_l"/>
+        <import id="tongue_mouth_open" connectivity="tongue"/>
+        <import id="mouth_open_shadow_l" connectivity="mouth_shadow_l"/>
+        <mirror axis="y" template="mouth_open_shadow_l"/>
+    </g>
+    <g id="eye_l" bone="skull">
+        <import id="eye_outline_l"/>
+        <import id="eye_white_l"/>
+        <import id="eye_iris_l"/>
+        <import id="eye_pupil_l"/>
+        <import id="eye_lower_l" geometry="eye_shadow_lower_l"/>
+        <import id="eye_upper_l" geometry="eye_shadow_upper_l"/>
+        <import id="eye_lid_l" geometry="eye_shadow_lid_l"/>
+        <import id="eye_shadow_lid_l" connectivity="eye_lid_l"/>
+        <!--
+        <import id="eye_lid_crease_l"/>
+        <mirror id="eye_lid_crease_r" axis="y" template="eye_lid_crease_l"/>
+        -->
+        <import id="eye_lashes_l"/>
+    </g>
+    <g id="eye_r" bone="skull">
+        <mirror axis="y" template="eye_outline_l"/>
+        <mirror axis="y" template="eye_white_l"/>
+        <mirror axis="y" template="eye_iris_l"/>
+        <mirror axis="y" template="eye_pupil_l"/>
+        <mirror axis="y" template="eye_lower_l"/>
+        <mirror axis="y" template="eye_upper_l"/>
+        <mirror axis="y" template="eye_lid_l"/>
+        <mirror axis="y" template="eye_shadow_lid_l"/>
+        <!--
+        <import id="eye_lid_crease_l"/>
+        <mirror id="eye_lid_crease_r" axis="y" template="eye_lid_crease_l"/>
+        -->
+        <mirror axis="y" template="eye_lashes_l"/>
+    </g>
+    <g id="face_decorations" bone="skull">
+        <import id="eyebrow_l"/>
+        <mirror axis="y" template="eyebrow_l"/>
+        <import id="nose"/>
+    </g>
+    <g id="teeth" bone="skull">
+        <import id="teeth_upper_l"/>
+        <mirror axis="y" template="teeth_upper_l"/>
+    </g>
+    <g id="lips" bone="skull">
+        <import id="lower_lip_l" connectivity="lower_lip_l"/>
+        <mirror axis="y" template="lower_lip_l"/>
+        <import id="upper_lip_l" connectivity="upper_lip_l"/>
+        <mirror axis="y" template="upper_lip_l"/>
+    </g>
+    <g id="lips_open" bone="skull">
+        <import id="lower_lip_open_l" connectivity="lower_lip_l"/>
+        <mirror axis="y" template="lower_lip_open_l"/>
+        <import id="upper_lip_open_l" connectivity="upper_lip_l"/>
+        <mirror axis="y" template="upper_lip_open_l"/>
+    </g>
+    <g id="hair1_back_group">
+        <import id="hair1_back"/>
+    </g>
+    <g id="hair1_front">
+        <import id="hair1_front_l"/>
+        <import id="hair1_front_r"/>
+    </g>
+    <g id="torso_decorations" bone="pelvis">
+        <import id="line_collarbone_l"/>
+        <import id="line_collarbone_r"/>
+        <import id="belly_button"/>
+    </g>
+    <g id="torso_base" bone="pelvis">
+        <import id="torso_base_l" connectivity="torso_l"/>
+        <mirror axis="y" template="torso_base_l"/>
+    </g>
+    <g id="torso_shoulders0" bone="pelvis">
+        <import id="torso_shoulders0_l" connectivity="torso_l"/>
+        <mirror axis="y" template="torso_shoulders0_l"/>
+    </g>
+    <g id="torso_waist0" bone="pelvis">
+        <import id="torso_waist0_l" connectivity="torso_l"/>
+        <mirror axis="y" template="torso_waist0_l"/>
+    </g>
+    <g id="torso_waist100" bone="pelvis">
+        <import id="torso_waist100_l" connectivity="torso_l"/>
+        <mirror axis="y" template="torso_waist100_l"/>
+    </g>
+    <g id="torso_hips0" bone="pelvis">
+        <import id="torso_hips0_l" connectivity="torso_l"/>
+        <mirror axis="y" template="torso_hips0_l"/>
+    </g>
+    <g id="torso_hips100" bone="pelvis">
+        <import id="torso_hips100_l" connectivity="torso_l"/>
+        <mirror axis="y" template="torso_hips100_l"/>
+    </g>
+    <g id="hands">
+        <import id="hand_l" bone="hand_bone_l"/>
+        <mirror axis="y" template="hand_l"/>
+    </g>
+    <g id="lower_arms_base">
+        <import id="lower_arm_base_l" geometry="lower_arm_l"
+             connectivity="lower_arm_l" bone="lower_arm_bone_l"/>
+        <mirror axis="y" template="lower_arm_base_l"/>
+    </g>
+    <g id="upper_arms_base">
+        <import id="upper_arm_base_l" geometry="upper_arm_l"
+             connectivity="upper_arm_l" bone="upper_arm_bone_l"/>
+        <mirror axis="y" template="upper_arm_base_l"/>
+    </g>
+    <g id="legs_base">
+        <import id="leg_base_l" connectivity="leg_l" bone="thigh_bone_l"/>
+        <mirror axis="y" template="leg_base_l"/>
+    </g>
+    <g id="feet">
+        <import id="foot_l" bone="foot_bone_l"/>
+        <mirror axis="y" template="foot_l"/>
+    </g>
+    <g id="lower_arms">
+        <conform id="lower_arm_l" geometry="lower_arm_base_l"
+             target="torso_base_l">
+            <default offset="static" anchor="upper_shoulder_l"/>
+        </conform>
+        <conform id="lower_arm_r" geometry="lower_arm_base_r"
+             target="torso_base_r">
+            <default offset="static" anchor="upper_shoulder_r"/>
+        </conform>
+    </g>
+    <g id="upper_arms">
+        <conform id="upper_arm_l" geometry="upper_arm_base_l"
+             target="torso_base_l">
+            <default offset="static" anchor="upper_shoulder_l"/>
+        </conform>
+        <conform id="upper_arm_r" geometry="upper_arm_base_r"
+             target="torso_base_r">
+            <default offset="static" anchor="upper_shoulder_r"/>
+        </conform>
+    </g>
+    <g id="legs">
+        <conform id="leg_l" geometry="leg_base_l" target="torso_base_l">
+            <default offset="none"/>
+            <node idx="0" offset="dynamic" anchor="hip_joint_l"/>
+            <node idx="1" offset="dynamic" anchor="hip_joint_l"/>
+        </conform>
+        <conform id="leg_r" geometry="leg_base_r" target="torso_base_r">
+            <default offset="none"/>
+            <node idx="0" offset="dynamic" anchor="hip_joint_r"/>
+            <node idx="1" offset="dynamic" anchor="hip_joint_r"/>
+        </conform>
+    </g>
+    <g id="legs_decoration">
+        <!--
+        <import id="outline_knee_cap_l"/>
+        <mirror id="outline_knee_cap_r" axis="y"
+             template="outline_knee_cap_l"/>
+        <import id="shade_knee_cap_l"/>
+        <mirror id="shade_knee_cap_r" axis="y" template="shade_knee_cap_l"/>
+        -->
+        <import id="knee_cap_l" bone="thigh_bone_l"/>
+        <mirror axis="y" template="knee_cap_l"/>
+    </g>
+    <g id="crotch_shadow" bone="pelvis">
+        <import id="pussy_shadow"/>
+    </g>
+    <g id="pussy" bone="pelvis">
+        <import id="pussy_shadow_red"/>
+        <import id="labia_inner_l"/>
+        <mirror axis="y" template="labia_inner_l"/>
+        <import id="labia_outer_l"/>
+        <mirror axis="y" template="labia_outer_l"/>
+        <import id="pubes_triangle_wavy"/>
+    </g>
+    <g id="boobs_clothed_20" bone="pelvis">
+        <import id="boob_clothed_20_l" connectivity="boob_l"/>
+        <mirror axis="y" template="boob_clothed_20_l"/>
+    </g>
+    <g id="boobs_clothed_100" bone="pelvis">
+        <import id="boob_clothed_100_l" connectivity="boob_l"/>
+        <mirror axis="y" template="boob_clothed_100_l"/>
+    </g>
+    <g id="boobs0" bone="pelvis">
+        <import id="boob0_l" connectivity="boob_l"/>
+        <mirror axis="y" template="boob0_l"/>
+    </g>
+    <g id="boobs20" bone="pelvis">
+        <import id="boob20_l" connectivity="boob_l"/>
+        <mirror axis="y" template="boob20_l"/>
+    </g>
+    <g id="boobs100" bone="pelvis">
+        <import id="boob100_l" connectivity="boob_l"/>
+        <mirror axis="y" template="boob100_l"/>
+    </g>
+    <g id="nipples_base" bone="pelvis">
+        <import id="aureola_base_l" geometry="aureola_l" />
+        <mirror axis="y" template="aureola_base_l"/>
+        <import id="nipple_stem_base_l" geometry="nipple_stem_l" />
+        <mirror axis="y" template="nipple_stem_base_l"/>
+        <import id="nipple_top_base_l" geometry="nipple_top_l" />
+        <mirror axis="y" template="nipple_top_base_l"/>
+    </g>
+    <g id="nipple_l" bone="boob_bone_l">
+        <conform id="aureola_l" geometry="aureola_base_l" target="boob20_l">
+            <default offset="dynamic" anchor="boob_outer_l"/>
+        </conform>
+        <conform id="nipple_stem_l" geometry="nipple_stem_base_l"
+             target="boob20_l">
+            <default offset="dynamic" anchor="boob_outer_l"/>
+        </conform>
+        <conform id="nipple_top_l" geometry="nipple_top_base_l"
+             target="boob20_l">
+            <default offset="dynamic" anchor="boob_outer_l"/>
+        </conform>
+    </g>
+    <g id="nipple_r" bone="boob_bone_r">
+        <conform id="aureola_r" geometry="aureola_base_r" target="boob20_r">
+            <default offset="dynamic" anchor="boob_outer_r"/>
+        </conform>
+        <conform id="nipple_stem_r" geometry="nipple_stem_base_r"
+             target="boob20_r">
+            <default offset="dynamic" anchor="boob_outer_r"/>
+        </conform>
+        <conform id="nipple_top_r" geometry="nipple_top_base_r"
+             target="boob20_r">
+            <default offset="dynamic" anchor="boob_outer_r"/>
+        </conform>
+    </g>
+
+    <g id="bra0_top" bone="pelvis">
+        <import id="simple_bra_cup_0_l" connectivity="bra_cup_l"/>
+        <mirror axis="y" template="simple_bra_cup_0_l"/>
+    </g>
+    <g id="bra20_top" bone="pelvis">
+        <import id="simple_bra_cup_20_l" connectivity="bra_cup_l"/>
+        <mirror axis="y" template="simple_bra_cup_20_l"/>
+    </g>
+    <g id="bra100_top" bone="pelvis">
+        <import id="simple_bra_cup_100_l" connectivity="bra_cup_l"/>
+        <mirror axis="y" template="simple_bra_cup_100_l"/>
+    </g>
+    <g id="bra0_straps" bone="pelvis">
+        <import id="simple_bra_strap_0_l" connectivity="bra_strap_l"/>
+        <mirror axis="y" template="simple_bra_strap_0_l"/>
+    </g>
+    <g id="bra20_straps" bone="pelvis">
+        <import id="simple_bra_strap_20_l" connectivity="bra_strap_l"/>
+        <mirror axis="y" template="simple_bra_strap_20_l"/>
+    </g>
+    <g id="bra100_straps" bone="pelvis">
+        <import id="simple_bra_strap_100_l" connectivity="bra_strap_l"/>
+        <mirror axis="y" template="simple_bra_strap_100_l"/>
+    </g>
+    <g id="bra0_back" bone="pelvis">
+        <import id="simple_bra_back_0_l" connectivity="bra_back_l"/>
+        <mirror axis="y" template="simple_bra_back_0_l"/>
+    </g>
+    <g id="bra20_back" bone="pelvis">
+        <import id="simple_bra_back_20_l" connectivity="bra_back_l"/>
+        <mirror axis="y" template="simple_bra_back_20_l"/>
+    </g>
+    <g id="bra100_back" bone="pelvis">
+        <import id="simple_bra_back_100_l" connectivity="bra_back_l"/>
+        <mirror axis="y" template="simple_bra_back_100_l"/>
+    </g>
+    <g id="panties_body_0" bone="pelvis">
+        <import id="panties_body_S_l" connectivity="panties_body_l"/>
+        <mirror axis="y" template="panties_body_S_l"/>
+    </g>
+    <g id="panties_body_20" bone="pelvis">
+        <import id="panties_body_M_l" connectivity="panties_body_l"/>
+        <mirror axis="y" template="panties_body_M_l"/>
+    </g>
+    <g id="panties_body_100" bone="pelvis">
+        <import id="panties_body_L_l" connectivity="panties_body_l"/>
+        <mirror axis="y" template="panties_body_L_l"/>
+    </g>
+    <g id="panties_decoration" bone="pelvis">
+        <import id="panties_shadow"/>
+        <import id="panties_top_l"/>
+        <mirror axis="y" template="panties_top_l"/>
+    </g>
+</geometry>
+<connectivity>
+    <mirror template_suffix="_l" mirror_suffix="_r"/>
+    <circular id="upper_lip_l"/>
+    <circular id="lower_lip_l"/>
+    <circular id="eye_lid_l"/>
+    <circular id="face_l">
+        <node id="chin_m"/>
+        <node id="chin_l"/>
+        <node id="jaw_l"/>
+        <node id="face_side_l"/>
+        <node id="face_top"/>
+    </circular>
+    <circular id="upper_arm_l">
+        <node id="crook_of_the_arm_l"/>
+        <node id="armpit_l"/>
+        <node id="inner_shoulder_l"/>
+        <node id="upper_shoulder_l"/>
+        <node id="outer_shoulder_l"/>
+        <node id="outer_upper_arm_l"/>
+        <node id="elbow_l"/>
+    </circular>
+    <circular id="lower_arm_l">
+        <node id="elbow_l"/>
+        <node id="outer_lower_arm_l"/>
+        <node id="outer_wrist_l"/>
+        <node id="inner_wrist_l"/>
+        <node id="inner_lower_arm_l"/>
+        <node id="crook_of_the_arm_l"/>
+    </circular>
+    <circular id="palm_l">
+        <node id="inner_wrist_l"/>
+        <node id="thumb_knuckle_1_l"/>
+        <node id="thumb_knuckle_2_l"/>
+        <node id="thumb_palm_l"/>
+        <node id="index_finger_inner_knuckle_1_l"/>
+        <node id="index_finger_inner_knuckle_2_l"/>
+        <node id="index_finger_outer_knuckle_l"/>
+        <node id="middle_finger_outer_knuckle_l"/>
+        <node id="back_of_hand_l"/>
+        <node id="outer_wrist_l"/>
+    </circular>
+    <circular id="torso_l">
+        <node id="head_m"/>
+        <node id="head_l"/>
+        <node id="throat_l"/>
+        <node id="collarbone_l"/>
+        <node id="upper_shoulder_l"/>
+        <node id="inner_shoulder_l"/>
+        <node id="armpit_l"/>
+        <node id="ribs_l"/>
+        <node id="waist_l"/>
+        <node id="pelvic_bone_l"/>
+        <node id="hip_joint_l"/>
+        <node id="crotch_l"/>
+        <node id="pussy2_l"/>
+        <node id="pussy3_l"/>
+        <node id="pussy4_l"/>
+        <node id="venus_mound"/>
+    </circular>
+    <circular id="leg_l">
+        <node id="hip_joint_l"/>
+        <node id="outer_thigh_l"/>
+        <node id="outer_knee_l"/>
+        <node id="outer_calf_l"/>
+        <node id="outer_ankle_l"/>
+        <node id="inner_ankle_l"/>
+        <node id="inner_calf_l"/>
+        <node id="inner_knee_l"/>
+        <node id="inner_thigh_l"/>
+        <node id="crotch_l"/>
+        <node id="top_thigh_l"/>
+        <node id="hip_joint_l"/>
+    </circular>
+    <circular id="boob_l">
+        <node id="cleavage_upper"/>
+        <node id="cleavage_lower"/>
+        <node id="boob_inner_l"/>
+        <node id="boob_bottom_l"/>
+        <node id="boob_outer_l"/>
+        <node id="boob_armpit_l"/>
+        <node id="boob_shoulder_l"/>
+        <node id="cleavage_upper"/>
+    </circular>
+</connectivity>
+        <!--
+        <connect>
+            <node id="elbow_l" geometry="upper_arm_l"/>
+            <arc/>
+            <node id="elbow_l" geometry="lower_arm_l"/>
+            <move/>
+            <node id="crook_of_the_arm_l" geometry="lower_arm_l"/>
+            <arc/>
+            <node id="crook_of_the_arm_l" geometry="upper_arm_l"/>
+            <move/>
+            <node id="elbow_l" geometry="upper_arm_l"/>
+        </connect>
+        <connect>
+            <node id="armpit_l" geometry="torso_l"/>
+            <arc/>
+            <node id="armpit_l" geometry="upper_arm_l"/>
+        </connect>
+        -->
+<drawingorder>
+    <bone name="skull">
+        <tier name="hair">
+            <geometry id="hair1_back_group"/>
+            <trace_outline
+                id="line_hair1_back"
+                base_geometry="hair1_back"
+                start="0"
+                end="-1"/>
+        </tier>
+        <tier name="body">
+            <animation name="face_open_mouth"/>
+        </tier>
+        <tier name="details">
+            <trace_outline
+                id="line_face_l"
+                base_geometry="face_l"
+                start="0"
+                end="4"/>
+            <geometry id="eye_l"/>
+            <geometry id="eyebrow_l"/>
+            <trace_outline
+                id="line_face_r"
+                base_geometry="face_r"
+                start="0"
+                end="4"/>
+            <geometry id="eye_r"/>
+            <geometry id="eyebrow_r"/>
+            <geometry id="nose"/>
+            <animation name="face_tongue"/>
+            <geometry id="teeth"/>
+            <animation name="face_lips_open_mouth"/>
+            <geometry id="hair1_front"/>
+            <trace_outline
+                id="line_hair1_front_l"
+                base_geometry="hair1_front_l"
+                start="0"
+                end="13"/>
+            <trace_outline
+                id="line_hair1_front_r"
+                base_geometry="hair1_front_r"
+                start="0"
+                end="7"/>
+        </tier>
+    </bone>
+    <bone name="boob_bone_l">
+        <tier name="body">
+            <animation name="boobs_clothing_elasticity"/>
+        </tier>
+        <!--
+        <tier name="shadows">
+            <trace_outline
+                id="shadow_boob_l"
+                base_geometry="boob_l"
+                start="2"
+                end="4"/>
+        </tier>
+        -->
+        <tier name="skin">
+            <trace_outline
+                id="line_cleavage_l"
+                base_geometry="boob_l"
+                start="0"
+                end="1"/>
+            <trace_outline
+                id="line_boob_l"
+                base_geometry="boob_l"
+                start="2"
+                end="6"/>
+            <geometry id="nipple_l"/>
+        </tier>
+    </bone>
+    <!-- TODO split boobs animation for left and right side -->
+    <bone name="boob_bone_r">
+        <!--
+        <tier name="shadows">
+            <trace_outline
+                id="shadow_boob_r"
+                base_geometry="boob_r"
+                start="2"
+                end="4"/>
+        </tier>
+        -->
+        <tier name="skin">
+            <trace_outline
+                id="line_cleavage_r"
+                base_geometry="boob_r"
+                start="0"
+                end="1"/>
+            <trace_outline
+                id="line_boob_r"
+                base_geometry="boob_r"
+                start="2"
+                end="6"/>
+            <geometry id="nipple_r"/>
+        </tier>
+    </bone>
+    <bone name="pelvis">
+        <tier name="body">
+            <animation name="torso"/>
+            <geometry id="crotch_shadow"/>
+        </tier>
+        <tier name="skin">
+            <geometry id="pussy"/>
+            <geometry id="torso_decorations"/>
+            <trace_outline
+                id="line_neck_l"
+                base_geometry="torso_l"
+                start="0"
+                end="4"/>
+            <trace_outline
+                id="line_neck_r"
+                base_geometry="torso_r"
+                start="0"
+                end="4"/>
+            <trace_outline
+                id="line_torso_l"
+                base_geometry="torso_l"
+                start="6"
+                end="10"/>
+            <trace_outline
+                id="line_torso_r"
+                base_geometry="torso_r"
+                start="6"
+                end="10"/>
+            <trace_outline
+                id="line_labia_outer_l"
+                base_geometry="labia_outer_l"
+                start="2"
+                end="4"/>
+            <trace_outline
+                id="line_labia_outer_r"
+                base_geometry="labia_outer_r"
+                start="2"
+                end="4"/>
+        </tier>
+    </bone>
+    <bone name="upper_arm_bone_l">
+        <tier name="body">
+            <geometry id="upper_arm_l"/>
+        </tier>
+    </bone>
+    <bone name="upper_arm_bone_r">
+        <tier name="body">
+            <geometry id="upper_arm_r"/>
+        </tier>
+    </bone>
+    <bone name="lower_arm_bone_l">
+        <tier name="body">
+            <connect>
+                <node id="elbow_l" geometry="upper_arm_l"/>
+                <arc/>
+                <node id="elbow_l" geometry="lower_arm_l"/>
+                <move/>
+                <node id="crook_of_the_arm_l" geometry="lower_arm_l"/>
+                <arc/>
+                <node id="crook_of_the_arm_l" geometry="upper_arm_l"/>
+                <move/>
+                <node id="elbow_l" geometry="upper_arm_l"/>
+            </connect>
+            <geometry id="lower_arm_l"/>
+        </tier>
+    </bone>
+    <bone name="lower_arm_bone_r">
+        <tier name="body">
+            <connect>
+                <node id="elbow_r" geometry="upper_arm_r"/>
+                <arc/>
+                <node id="elbow_r" geometry="lower_arm_r"/>
+                <move/>
+                <node id="crook_of_the_arm_r" geometry="lower_arm_r"/>
+                <arc/>
+                <node id="crook_of_the_arm_r" geometry="upper_arm_r"/>
+                <move/>
+                <node id="elbow_r" geometry="upper_arm_r"/>
+            </connect>
+            <geometry id="lower_arm_r"/>
+        </tier>
+    </bone>
+    <bone name="hand_bone_l">
+        <tier name="body">
+            <connect>
+                <node id="inner_wrist_l" geometry="lower_arm_l"/>
+                <arc/>
+                <node id="inner_wrist_l" geometry="palm_l"/>
+                <move/>
+                <node id="outer_wrist_l" geometry="lower_arm_l"/>
+                <arc/>
+                <node id="outer_wrist_l" geometry="palm_l"/>
+                <move/>
+                <node id="inner_wrist_l" geometry="lower_arm_l"/>
+            </connect>
+            <geometry id="hand_l"/>
+        </tier>
+    </bone>
+    <bone name="hand_bone_r">
+        <tier name="body">
+            <connect>
+                <node id="inner_wrist_r" geometry="lower_arm_r"/>
+                <arc/>
+                <node id="inner_wrist_r" geometry="palm_r"/>
+                <move/>
+                <node id="outer_wrist_r" geometry="lower_arm_r"/>
+                <arc/>
+                <node id="outer_wrist_r" geometry="palm_r"/>
+                <move/>
+                <node id="inner_wrist_r" geometry="lower_arm_r"/>
+            </connect>
+            <geometry id="hand_r"/>
+        </tier>
+    </bone>
+    <bone name="thigh_bone_l">
+        <tier name="body">
+            <geometry id="leg_l"/>
+            <trace_outline
+                id="line_leg_outer_l"
+                base_geometry="leg_l"
+                start="0"
+                end="4"/>
+            <trace_outline
+                id="line_leg_inner_l"
+                base_geometry="leg_l"
+                start="5"
+                end="9"/>
+        </tier>
+        <tier name="skin">
+            <geometry id="knee_cap_l"/>
+        </tier>
+    </bone>
+    <bone name="thigh_bone_r">
+        <tier name="body">
+            <geometry id="leg_r"/>
+            <trace_outline
+                id="line_leg_outer_r"
+                base_geometry="leg_r"
+                start="0"
+                end="4"/>
+            <trace_outline
+                id="line_leg_inner_r"
+                base_geometry="leg_r"
+                start="5"
+                end="9"/>
+        </tier>
+        <tier name="skin">
+            <geometry id="knee_cap_r"/>
+        </tier>
+    </bone>
+    <bone name="foot_bone_l">
+        <tier name="body">
+            <geometry id="foot_l"/>
+            <trace_outline
+                id="line_feet_1_l"
+                base_geometry="path_foot_l"
+                start="0"
+                end="11"/>
+            <trace_outline
+                id="line_feet_2_l"
+                base_geometry="path_foot_l"
+                start="12"
+                end="14"/>
+            <trace_outline
+                id="line_feet_3_l"
+                base_geometry="path_foot_l"
+                start="15"
+                end="17"/>
+            <trace_outline
+                id="line_feet_4_l"
+                base_geometry="path_foot_l"
+                start="18"
+                end="23"/>
+        </tier>
+    </bone>
+    <bone name="foot_bone_r">
+        <tier name="body">
+            <geometry id="foot_r"/>
+        <!--
+            <trace_outline
+                id="line_feet_1_r"
+                base_geometry="path_foot_r"
+                start="0"
+                end="11"/>
+            <trace_outline
+                id="line_feet_2_r"
+                base_geometry="path_foot_r"
+                start="12"
+                end="14"/>
+            <trace_outline
+                id="line_feet_3_r"
+                base_geometry="path_foot_r"
+                start="15"
+                end="17"/>
+            <trace_outline
+                id="line_feet_4_r"
+                base_geometry="path_foot_r"
+                start="18"
+                end="23"/>
+            -->
+        </tier>
+    </bone>
+</drawingorder>
+<item id="basic_bra" slot="bra" zlevel="bra">
+    <animation name="bra" bone="nipple_bone_l"/>
+    <animation name="bra_straps" bone="boob_bone_l"/>
+    <animation name="bra_back" bone="upper_spine"/>
+</item>
+<item id="basic_panties" slot="panties" zlevel="panties">
+    <animation name="panties" bone="pelvis"/>
+    <geometry id="panties_decoration" bone="pelvis"/>
+</item>
+<animations>
+    <animation name="face_open_mouth" default="0"
+         geoid="('face_l', 'face_r')">
+        <keyframe number="0" geometry="face"/>
+        <keyframe number="100" geometry="face_mouth_open"/>
+    </animation>
+    <animation name="face_tongue" default="0">
+        <keyframe number="0" geometry="mouth_normal"/>
+        <keyframe number="100" geometry="mouth_open"/>
+    </animation>
+    <animation name="face_lips_open_mouth" default="0">
+        <keyframe number="0" geometry="lips"/>
+        <keyframe number="100" geometry="lips_open"/>
+    </animation>
+    <animation name="body_boobs" default="30">
+        <keyframe number="0" geometry="boobs0"/>
+        <keyframe number="40" geometry="boobs20"/>
+        <keyframe number="100" geometry="boobs100"/>
+    </animation>
+    <animation name="body_boobs_clothed" default="30">
+        <keyframe number="0" geometry="boobs0"/>
+        <keyframe number="40" geometry="boobs_clothed_20"/>
+        <keyframe number="100" geometry="boobs_clothed_100"/>
+    </animation>
+    <combined name="boobs_clothing_elasticity" default="100"
+         geoid="('boob_l', 'boob_r')">
+         <animation name="body_boobs">
+    	       <keyframe number="0" weight="100"/>
+    	       <keyframe number="100" weight="0"/>
+        </animation>
+         <animation name="body_boobs_clothed">
+    	       <keyframe number="0" weight="0"/>
+    	       <keyframe number="100" weight="100"/>
+        </animation>
+    </combined>
+   <animation name="bra" default="30">
+		<keyframe number="0" geometry="bra0_top"/>
+		<keyframe number="40" geometry="bra20_top"/>
+		<keyframe number="100" geometry="bra100_top"/>
+	</animation>
+   <animation name="bra_straps" default="30">
+		<keyframe number="0" geometry="bra0_straps"/>
+		<keyframe number="40" geometry="bra20_straps"/>
+		<keyframe number="100" geometry="bra100_straps"/>
+	</animation>
+   <animation name="bra_back" default="30">
+		<keyframe number="0" geometry="bra0_back"/>
+		<keyframe number="40" geometry="bra20_back"/>
+		<keyframe number="80" geometry="bra100_back"/>
+		<keyframe number="100" geometry="bra100_back"/>
+	</animation>
+    <animation name="panties" default="40">
+        <keyframe number="0" geometry="panties_body_0"/>
+        <keyframe number="50" geometry="panties_body_20"/>
+        <keyframe number="100" geometry="panties_body_100"/>
+    </animation>
+	<animation name="shoulders" default="50">
+		<keyframe number="0" geometry="torso_shoulders0"/>
+		<keyframe number="50" geometry="torso_base"/>
+		<keyframe number="100" geometry="torso_base"/>
+	</animation>
+	<animation name="waist" default="40">
+		<keyframe number="0" geometry="torso_waist0"/>
+		<keyframe number="50" geometry="torso_base"/>
+		<keyframe number="100" geometry="torso_waist100"/>
+	</animation>
+	<animation name="hips" default="40">
+		<keyframe number="0" geometry="torso_hips0"/>
+		<keyframe number="50" geometry="torso_base"/>
+		<keyframe number="100" geometry="torso_hips100"/>
+	</animation>
+    <combined name="torso" default="50"
+         geoid="('torso_l', 'torso_r')">
+        <animation name="shoulders">
+    	       <keyframe number="0" weight="1"/>
+    	       <keyframe number="100" weight="1"/>
+        </animation>
+         <animation name="waist">
+    	       <keyframe number="0" weight="1"/>
+    	       <keyframe number="100" weight="1"/>
+        </animation>
+         <animation name="hips">
+    	       <keyframe number="0" weight="1"/>
+    	       <keyframe number="100" weight="1"/>
+        </animation>
+    </combined>
+</animations>
+<dials>
+    <dial name="open_mouth" min="1" max="100">
+        <animation name="face_open_mouth"
+             min="0" init="0" max="100"/>
+        <animation name="face_tongue"
+             min="0" init="0" max="100"/>
+        <animation name="face_lips_open_mouth"
+             min="0" init="0" max="100"/>
+    </dial>
+    <dial name="boobs_size" min="1" max="100">
+        <animation name="body_boobs" min="0" init="30" max="100"/>
+        <animation name="body_boobs_clothed" min="0" init="30" max="100"/>
+        <animation name="bra" min="0" init="30" max="100"/>
+        <animation name="bra_straps" min="0" init="30" max="100"/>
+        <animation name="bra_back" min="0" init="30" max="100"/>
+    </dial>
+    <dial name="clothing_elasticity" min="1" max="100">
+        <animation name="boobs_clothing_elasticity"
+             min="0" init="100" max="100"/>
+    </dial>
+
+    <dial name="skirt_length" min="1" max="100">
+        <animation name="uniform_skirt_XS_length"
+             min="0" init="70" max="100"/>
+        <animation name="uniform_skirt_M_length"
+             min="0" init="70" max="100"/>
+        <animation name="uniform_skirt_XL_length"
+             min="0" init="70" max="100"/>
+    </dial>
+    <dial name="shoulders" min="1" max="100">
+        <animation name="shoulders"
+             min="0" init="50" max="100"/>
+    </dial>
+    <dial name="waist" min="1" max="100">
+        <animation name="waist"
+             min="0" init="40" max="100"/>
+    </dial>
+    <dial name="hips" min="1" max="100">
+        <animation name="hips"
+             min="0" init="40" max="100"/>
+        <animation name="panties"
+             min="0" init="40" max="100"/>
+        <animation name="uniform_skirt_hips"
+             min="0" init="40" max="100"/>
+    </dial>
+</dials>
+</xml>

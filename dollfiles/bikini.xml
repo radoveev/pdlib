@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xml>
+<geometry>
+    <g id="bikini_top_S">
+        <import id="top_middle_string_S_l" connectivity="top_middle_string_l"/>
+        <mirror axis="y" template="top_middle_string_S_l"/>
+        <import id="top_outer_string_S_l" connectivity="top_outer_string_l"/>
+        <mirror axis="y" template="top_outer_string_S_l"/>
+        <import id="top_upper_string_S_l" connectivity="top_upper_string_l"/>
+        <mirror axis="y" template="top_upper_string_S_l"/>
+        <import id="top_triangle_S_l" connectivity="top_triangle_l"/>
+        <mirror axis="y" template="top_triangle_S_l"/>
+    </g>
+    <g id="bikini_top_M">
+        <import id="top_middle_string_M_l" connectivity="top_middle_string_l"/>
+        <mirror axis="y" template="top_middle_string_M_l"/>
+        <import id="top_outer_string_M_l" connectivity="top_outer_string_l"/>
+        <mirror axis="y" template="top_outer_string_M_l"/>
+        <import id="top_upper_string_M_l" connectivity="top_upper_string_l"/>
+        <mirror axis="y" template="top_upper_string_M_l"/>
+        <import id="top_triangle_M_l" connectivity="top_triangle_l"/>
+        <mirror axis="y" template="top_triangle_M_l"/>
+    </g>
+    <g id="bikini_top_L">
+        <import id="top_middle_string_L_l" connectivity="top_middle_string_l"/>
+        <mirror axis="y" template="top_middle_string_L_l"/>
+        <import id="top_outer_string_L_l" connectivity="top_outer_string_l"/>
+        <mirror axis="y" template="top_outer_string_L_l"/>
+        <import id="top_upper_string_L_l" connectivity="top_upper_string_l"/>
+        <mirror axis="y" template="top_upper_string_L_l"/>
+        <import id="top_triangle_L_l" connectivity="top_triangle_l"/>
+        <mirror axis="y" template="top_triangle_L_l"/>
+    </g>
+    <!--
+    <g id="bikini_top_M">
+        <import id="top_M_l"
+             connectivity="(top_triangle_l,top_upper_string_l,top_outer_string_l,top_middle_string_l)"/>
+        <mirror id="top_M_r" axis="y"
+             template="top_M_l"/>
+    </g>
+    <g id="bikini_top_L">
+        <import id="top_L_l"
+             connectivity="(top_triangle_l,top_upper_string_l,top_outer_string_l,top_middle_string_l)"/>
+        <mirror id="top_L_r" axis="y"
+             template="top_L_l"/>
+    </g>
+    -->
+    <g id="bikini_bottom">
+        <import id="bottom_string_M_l"/>
+        <mirror axis="y" template="bottom_string_M_l"/>
+        <import id="bottom_triangle_M_l"/>
+        <mirror axis="y" template="bottom_triangle_M_l"/>
+    </g>
+</geometry>
+<connectivity>
+    <mirror template_suffix="_l" mirror_suffix="_r"/>
+</connectivity>
+<!--
+<layers>
+    <layer name="bikini">
+        <animation name="bikini_boobs"/>
+        <geometry id="bikini_bottom"/>
+    </layer>
+</layers>
+-->
+<animations>
+   <animation name="bikini_boobs" default="30">
+		<keyframe number="0" geometry="bikini_top_S"/>
+		<keyframe number="30" geometry="bikini_top_M"/>
+		<keyframe number="100" geometry="bikini_top_L"/>
+	</animation>
+</animations>
+<dials>
+    <dial name="boobs_size">
+        <animation name="bikini_boobs" min="0" init="30" max="100"/>
+    </dial>
+</dials>
+</xml>

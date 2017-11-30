@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xml>
+<geometry>
+    <import id="uni_sock_l"/>
+    <mirror axis="y" template="uni_sock_l"/>
+    <import id="uni_shoe_body_l"/>
+    <mirror axis="y" template="uni_shoe_body_l"/>
+    <import id="uni_shoe_back_l"/>
+    <mirror axis="y" template="uni_shoe_back_l"/>
+    <import id="uni_shoe_decoration_l"/>
+    <mirror axis="y" template="uni_shoe_decoration_l"/>
+</geometry>
+<connectivity>
+    <mirror template_suffix="_l" mirror_suffix="_r"/>
+</connectivity>
+<item id="uniform_socks" slot="stockings" zlevel="stockings">
+    <geometry id="uni_sock_l" bone="foot_bone_l"/>
+    <geometry id="uni_sock_r" bone="foot_bone_r"/>
+</item>
+<item id="uniform_shoes" slot="shoes" zlevel="shoes">
+    <geometry id="uni_shoe_body_l" bone="foot_bone_l"/>
+    <geometry id="uni_shoe_body_r" bone="foot_bone_r"/>
+    <geometry id="uni_shoe_decoration_l" bone="foot_bone_l" ztier="detail"/>
+    <geometry id="uni_shoe_decoration_r" bone="foot_bone_r" ztier="detail"/>
+    <geometry id="uni_shoe_back_l" bone="foot_bone_l" zlevel="body-10"/>
+    <geometry id="uni_shoe_back_r" bone="foot_bone_r" zlevel="body-10"/>
+</item>
+</xml>
