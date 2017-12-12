@@ -312,6 +312,10 @@ class MPaperdollEditor(MBase):
                         print(path.prettystring(), "\n")
         print()
 
+    def set_dial(self, name, value):
+        dial = self.dials[name]
+        dial.change_value(value)
+
     # TODO remove
     def trace_outline(self, geomelem, elemid, start=0, end=-1):
         """Creates a line along geomelem.

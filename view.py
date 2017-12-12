@@ -31,6 +31,8 @@ class DrawSchedule(QtCore.QObject):
         self.delay = delay
         # the number of changes that occurred
         self.changecount = 0
+        # set draw mode ("direct", "delayed" or "manual")
+        self.mode = "delayed"
         # connect simple signals
         sisi.connect(self.on__state_changed, signal="state changed",
                      channel="editor")
@@ -45,16 +47,14 @@ class DrawSchedule(QtCore.QObject):
             sisi.send(signal="draw doll")
 
     def on__state_changed(self):
-        # remember that a change occurred
-        self.changecount += 1
-        # each time the state is changed we start waiting again
-        QtCore.QTimer.singleShot(self.delay, self.attempt_redraw)
-#        timer = QtCore.QTimer(self)
-#        timer.timeout.connect(self.attempt_redraw)
-#        timer.setSingleShot(True)
-#        timer.start(self.delay)
-#        t = threading.Timer(self.delay, self.attempt_redraw, [self.changeid])
-#        t.start()
+        if self.mode == "delayed":
+            # remember that a change occurred
+            self.changecount += 1
+            # each time the state is changed we start waiting again
+            QtCore.QTimer.singleShot(self.delay, self.attempt_redraw)
+        elif self.mode == "direct":
+            self.changecount = 0
+            sisi.send(signal="draw doll")
 
 
 class VBase(object):
@@ -579,6 +579,7 @@ class QSvgElementAttributeModel(QtGui.QStandardItemModel):
                 if child is not None:
                     elemids.append(child.text())
         return elemids
+
 
 class QScrollingWebView(QtWebEngineWidgets.QWebEngineView):
     def __init__(self, *args, **kwargs):
