@@ -168,6 +168,24 @@ class VPaperDoll(VWidget):
         vbox.addWidget(self.webview)
         self.setLayout(vbox)
 
+    def render(self, doll):
+        """Displays a doll given as bytes or svglib SVG document."""
+        if isinstance(doll, bytes):
+            self.render_str(doll)
+        else:
+            self.render_svgdoc(doll)
+
+    def render_svgdoc(self, svgdoc):
+        """Displays the doll from the SVG document in svglib format."""
+        # create an element tree from the svg document
+        xmlsvgelem = svgdoc.to_xml()
+        # create bytes from xml object
+        self.render_str(ET.tostring(xmlsvgelem))
+
+    def render_str(self, xml):
+        # update paperdoll webview
+        self.webview.setContent(xml, "image/svg+xml")
+
 
 class VDial(VWidget):
     """Controls one or more animation states.
@@ -380,14 +398,6 @@ class VEditorWindow(VBaseWindow):
         # connect simple signals
         sisi.autoconnect_signals(self)
 
-    def render_doll(self):
-        # create an element tree from the svg document
-        xmlsvgelem = self.svgdoc.to_xml()
-        # create bytes from xml object
-        xml = ET.tostring(xmlsvgelem)
-        # update paperdoll webview
-        self.doll.webview.setContent(xml, "image/svg+xml")
-
     @QtCore.pyqtSlot()
     def on_exportsvg_triggered(self):
         # ask user where we should save the svg file
@@ -436,7 +446,7 @@ class VEditorWindow(VBaseWindow):
         model = QSvgElementAttributeModel("slot")
         model.update(self.svgdoc)
         self.objectlist.setModel(model)
-        self.render_doll()
+        self.doll.render(self.svgdoc)
 
     def on__change_character(self, char):
         self.inventory.setCharacter(char.charid)
