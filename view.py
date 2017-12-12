@@ -31,9 +31,33 @@ class DrawSchedule(QtCore.QObject):
         self.delay = delay
         # the number of changes that occurred
         self.changecount = 0
-        # set draw mode ("direct", "delayed" or "manual")
-        self.mode = "delayed"
+        # set draw mode ("direct", "delayed" or "off")
+        self._mode = "delayed"
         # connect simple signals
+        sisi.connect(self.on__state_changed, signal="state changed",
+                     channel="editor")
+
+    @property
+    def mode(self):
+        """Return the drawing mode."""
+        return self._mode
+
+    @mode.setter
+    def mode(self, value):
+        sisi.disconnect(self.on__state_changed, signal="state changed",
+                        channel="editor")
+        if value == "delayed":
+            self.on__state_changed = self._delayed_redraw
+        elif value == "direct":
+            self.on__state_changed = self._direct_redraw
+        elif value == "off":
+            self.on__state_changed = self._no_redraw
+        else:
+            raise ValueError("Drawing mode must be either 'direct', " +
+                             "'delayed' or 'off'")
+        self.changecount = 0
+        log.info("Set paperdoll drawing mode to '%s'", value)
+        self._mode = value
         sisi.connect(self.on__state_changed, signal="state changed",
                      channel="editor")
 
@@ -44,17 +68,24 @@ class DrawSchedule(QtCore.QObject):
         self.changecount -= 1
         # has the time delay for all changes passed?
         if self.changecount is 0:
-            sisi.send(signal="draw doll")
+            self._direct_redraw()
 
-    def on__state_changed(self):
-        if self.mode == "delayed":
-            # remember that a change occurred
-            self.changecount += 1
-            # each time the state is changed we start waiting again
-            QtCore.QTimer.singleShot(self.delay, self.attempt_redraw)
-        elif self.mode == "direct":
-            self.changecount = 0
-            sisi.send(signal="draw doll")
+    def _delayed_redraw(self):
+#        print("delayed redraw")
+        # remember that a change occurred
+        self.changecount += 1
+        # each time the state is changed we start waiting again
+        QtCore.QTimer.singleShot(self.delay, self.attempt_redraw)
+
+    def _direct_redraw(self):
+#        print("direct redraw")
+        sisi.send(signal="draw doll")
+
+    def _no_redraw(self):
+#        print("no redraw")
+        pass
+
+    on__state_changed = _delayed_redraw
 
 
 class VBase(object):
