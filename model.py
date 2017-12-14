@@ -1179,29 +1179,60 @@ class MItem(MBase):
 
     @classmethod
     def from_xml(cls, xmlitem):
-        """Parses the XML description of an item and returns a model."""
+        """Parses the XML description of an item and returns its model."""
+        tagselem = xmlitem.find("tags")
+        if tagselem is not None:
+            xmlitem.remove(tagselem)
+            tags = MTagSet.from_xml(tagselem)
+        else:
+            tags = MTagSet()
         zlevel = xmlitem.get("zlevel", None)
         return cls(xmlitem.get("id"), xmlitem.get("slot"), zlevel=zlevel,
-                   drawdesc=list(xmlitem))
+                   drawdesc=list(xmlitem), tags=tags)
 
-    def __init__(self, itemid, slot, zlevel=None, drawdesc=None):
+    def __init__(self, itemid, slot, zlevel=None, drawdesc=None, tags=None):
         MBase.__init__(self)
         self.itemid = itemid
         self.name = "Item '%s'" % itemid
         if slot not in self.itemslots:
             log.warning("Unknown slot '%s' defined for %s", slot, self)
         self.slot = slot
+        # the positioning of the item on the z axis
         if zlevel is None:
             self.zlevel = self.itemslots[slot]
         else:
             self.zlevel = self.parse_zlevel(zlevel)
-        if drawdesc is None:
-            self.drawdesc = []  # XML elems describing how to draw the item
-        else:
-            self.drawdesc = drawdesc
+        # XML elems describing how to draw the item
+        self.drawdesc = [] if drawdesc is None else drawdesc
+        # key words describing the item
+        self.tags = MTagSet() if tags is None else tags
+        # modify tags based on item attributes
+        self.tags.add("%s slot" % self.slot)
 
     def __str__(self):
         return "<MItem object '%s' in %s>" % (self.itemid, self.slot)
+
+
+class MTagSet(MBase):
+    """A set of tags describing something.
+    """
+    @classmethod
+    def from_xml(cls, xmlitem):
+        """Parses the XML description of a tagset and returns its model."""
+        return cls([tag.strip() for tag in xmlitem.text.split(",")])
+
+    def __init__(self, tags=None):
+        MBase.__init__(self)
+        self.tags = set() if tags is None else set(tags)
+
+    def __str__(self):
+        return "<MTagSet %s>" % str(self.tags)
+
+    def __contains__(self, val):
+        return val in self.tags
+
+    def add(self, val):
+        self.tags.add(val)
 
 
 # --------------------------------------------------------------------------- #

@@ -198,6 +198,7 @@
     assumed.
 -->
 <item id="uniform_jacket" slot="jacket" zlevel="jacket">
+    <tags>school uniform</tags>
     <geometry id="uni_jacket_upper_arm_l" bone="upper_arm_bone_l"/>
     <geometry id="uni_jacket_upper_arm_r" bone="upper_arm_bone_r"/>
     <geometry id="uni_jacket_lower_arm_l" bone="lower_arm_bone_l"/>
