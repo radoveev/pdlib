@@ -733,12 +733,12 @@
     <combined name="boobs_clothing_elasticity" default="100"
          geoid="('boob_l', 'boob_r')">
          <animation name="body_boobs">
-    	       <keyframe number="0" weight="100"/>
-    	       <keyframe number="100" weight="0"/>
-        </animation>
-         <animation name="body_boobs_clothed">
     	       <keyframe number="0" weight="0"/>
     	       <keyframe number="100" weight="100"/>
+        </animation>
+         <animation name="body_boobs_clothed">
+    	       <keyframe number="0" weight="100"/>
+    	       <keyframe number="100" weight="0"/>
         </animation>
     </combined>
    <animation name="bra" default="30">
