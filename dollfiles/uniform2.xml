@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xml>
+<geometry>
+    <import id="uni2_jacket_body_l"/>
+    <mirror axis="y" template="uni2_jacket_body_l"/>
+    <import id="uni2_jacket_lower_arm_l"/>
+    <mirror axis="y" template="uni2_jacket_lower_arm_l"/>
+    <import id="uni2_jacket_upper_arm_l"/>
+    <mirror axis="y" template="uni2_jacket_upper_arm_l"/>
+    <import id="uni2_corset_body_l"/>
+    <mirror axis="y" template="uni2_corset_body_l"/>
+    <import id="uni2_corset_boob_l"/>
+    <mirror axis="y" template="uni2_corset_boob_l"/>
+    <import id="uni2_underbustcorset_l"/>
+    <mirror axis="y" template="uni2_underbustcorset_l"/>
+    <import id="uni2_garter_strap_l"/>
+    <mirror axis="y" template="uni2_garter_strap_l"/>
+    <import id="uni2_bra_l"/>
+    <mirror axis="y" template="uni2_bra_l"/>
+    <import id="uni2_panties_l"/>
+    <mirror axis="y" template="uni2_panties_l"/>
+</geometry>
+<connectivity>
+    <mirror template_suffix="_l" mirror_suffix="_r"/>
+</connectivity>
+<!-- item definitions
+    The slot defines the item slot this item will occupy in the character
+    inventory.
+    The zlevel should specify a slot name and an optional modifier and
+    therefore determines the zlevel base of this item.
+    The ztier modifies the zlevel base to determine the final zlevel of the
+    geometry element or animation. If no ztier is specified, no modifier is
+    assumed.
+-->
+<item id="uniform2_jacket" slot="jacket" zlevel="jacket">
+    <tags>sexy school uniform</tags>
+    <geometry id="uni2_jacket_upper_arm_l" bone="upper_arm_bone_l"/>
+    <geometry id="uni2_jacket_upper_arm_r" bone="upper_arm_bone_r"/>
+    <geometry id="uni2_jacket_lower_arm_l" bone="lower_arm_bone_l"/>
+    <geometry id="uni2_jacket_lower_arm_r" bone="lower_arm_bone_r"/>
+    <geometry id="uni2_jacket_body_l" bone="upper_spine"/>
+    <geometry id="uni2_jacket_body_r" bone="upper_spine"/>
+</item>
+<item id="uniform2_corset" slot="shirt" zlevel="shirt">
+    <tags>sexy school uniform</tags>
+    <geometry id="uni2_corset_boob_l" bone="nipple_bone_l"/>
+    <geometry id="uni2_corset_boob_r" bone="nipple_bone_r"/>
+    <geometry id="uni2_corset_body_l" bone="lower_spine"/>
+    <geometry id="uni2_corset_body_r" bone="lower_spine"/>
+    <geometry id="uni2_garter_strap_l" bone="pelvis"/>
+    <geometry id="uni2_garter_strap_r" bone="pelvis"/>
+</item>
+<item id="uniform2_underbust_corset" slot="shirt" zlevel="shirt">
+    <tags>sexy school uniform</tags>
+    <geometry id="uni2_underbustcorset_l" bone="lower_spine"/>
+    <geometry id="uni2_underbustcorset_r" bone="lower_spine"/>
+    <geometry id="uni2_garter_strap_l" bone="pelvis"/>
+    <geometry id="uni2_garter_strap_r" bone="pelvis"/>
+</item>
+<item id="uniform2_bra" slot="bra" zlevel="bra">
+    <tags>sexy school uniform</tags>
+    <geometry id="uni2_bra_l" bone="nipple_bone_l"/>
+    <geometry id="uni2_bra_r" bone="nipple_bone_r"/>
+</item>
+<item id="uniform2_panties" slot="panties" zlevel="panties">
+    <tags>sexy school uniform</tags>
+    <geometry id="uni2_panties_l" bone="pelvis"/>
+    <geometry id="uni2_panties_r" bone="pelvis"/>
+</item>
+<animations>
+</animations>
+<dials>
+</dials>
+</xml>
