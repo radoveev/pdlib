@@ -241,8 +241,9 @@ class MPaperdollEditor(MBase):
                 target[name] = data
 
     def load_doll_file(self, descfile):
+        log.info("Load %s", descfile.path.name)
         # load layers
-        log.info("Load XML layer descriptions")
+        log.debug("Load XML layer descriptions")
         xmllayers = descfile.tree.find("layers")
         if xmllayers is None:
             log.warning("No layer description found in %s",
@@ -250,7 +251,7 @@ class MPaperdollEditor(MBase):
         else:
             self.xmllayers.extend(list(xmllayers))
         # load drawing order
-        log.info("Load XML drawing order descriptions")
+        log.debug("Load XML drawing order descriptions")
         xmlbones = descfile.tree.find("drawingorder")
         if xmlbones is None:
             log.warning("No drawing order description found in %s",
@@ -258,7 +259,7 @@ class MPaperdollEditor(MBase):
         else:
             self.xmlbones.extend(list(xmlbones))
         # load items
-        log.info("Load XML item descriptions")
+        log.debug("Load XML item descriptions")
         xmlitems = descfile.tree.findall("item")
         if xmlitems is None:
             log.warning("No item description found in %s",
@@ -266,7 +267,7 @@ class MPaperdollEditor(MBase):
         else:
             self.xmlitems.extend(xmlitems)
         # load dials
-        log.info("Load dials")
+        log.debug("Load dials")
         xmldials = descfile.tree.find("dials")
         if xmldials is None:
             log.warning("No dial description found in %s",
